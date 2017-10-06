@@ -1,5 +1,7 @@
 class Comedian < ActiveRecord::Base
-  # validates name:, presence: true
-  # validates age:, presence: true
-  # has_many :specials
+  has_many :specials
+
+  def method_name
+
+  end
 end
