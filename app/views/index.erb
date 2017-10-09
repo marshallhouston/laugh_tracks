@@ -1,14 +1,14 @@
 <h1>Comedian Information</h1>
 <h3> Comedian Statistics </h3>
-<h4> Average Age of Comedians: <%= @comedians.first.average_age %> years old</h4>
+<h4> Average Age of All Comedians: <%= @comedians.first.average_age %> years old</h4>
 
 <h3> Comedian Personal Info </h3>
 <% @comedians.each do |comedian| %>
   <h5> <%= comedian.name %> </h5>
   <p> Age: <%= comedian.age %> </p>
   <p> Specials:
-  <% comedian.specials.each do |special| %>
-    <p> <%= special.name %> </p>
+  <% comedian.special_names.each do |name| %>
+    <p> <%= name %> </p>
   <% end %>
   </p>
   <p> Total Number of Specials <%= comedian.specials.count %> </p>

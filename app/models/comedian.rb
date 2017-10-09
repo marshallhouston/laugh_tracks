@@ -6,6 +6,9 @@ class Comedian < ActiveRecord::Base
     Comedian.average(:age).round
   end
 
+  def special_names
+    specials.map {|special| special.name}
+  end
 #As a user, when I visit /comedians?age=34 I see a list of all comedians with an age of 34.
   # def specific_age(age)
   #   Comedian.where(params[age])
